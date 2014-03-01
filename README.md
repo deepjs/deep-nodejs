@@ -1,4 +1,4 @@
-deep-node-http provides a nodejs http client (store) for deepjs
+deepjs/nodejs related stuff. clients, stores, ....
 
 
 Docs coming soon.
