@@ -36,7 +36,7 @@ define(["require","deepjs/deep", "deepjs/lib/unit"], function (require, deep, Un
         }),
         tests : {
             post:function(){
-                return deep.store(this)
+                return deep.rest(this)
                 //.log("chain store init in test")
                 .post( postTest )
                 .equal( postTest )
@@ -45,7 +45,7 @@ define(["require","deepjs/deep", "deepjs/lib/unit"], function (require, deep, Un
             },
             put:function(){
                 // post
-                return deep.store(this)
+                return deep.rest(this)
                 // put
                 .put(putTest)
                 .equal( putTest )
@@ -54,7 +54,7 @@ define(["require","deepjs/deep", "deepjs/lib/unit"], function (require, deep, Un
             },
             patch:function(){
                 // post
-                return deep.store(this)
+                return deep.rest(this)
                 .patch({
                     order:4,
                     newVar:true,
@@ -67,7 +67,7 @@ define(["require","deepjs/deep", "deepjs/lib/unit"], function (require, deep, Un
             },
             del:function () {
                 var delDone = false;
-                return deep.store(this)
+                return deep.rest(this)
                 .del("id123")
                 .done(function (argument) {
                     delDone = true;
@@ -84,7 +84,7 @@ define(["require","deepjs/deep", "deepjs/lib/unit"], function (require, deep, Un
 
 
 /*
-deep.store("myobjects")
+deep.rest("myobjects")
 .patch({
     id:"id1381690769563",
     test:"hello",
